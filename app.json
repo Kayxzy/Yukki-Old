@@ -1,9 +1,9 @@
 {
     "name": "Veez Mega Bot",
-    "logo": "https://telegra.ph/file/9dd9b20abcda2d7bb6725.png",
+    "logo": "https://telegra.ph/file/8e85828f36b684e893fa9.jpg",
     "description": "veez music mega allow you to stream music trought the telegram voice chat feature.",
     "keywords": ["music", "voice chat", "telegram"],
-    "repository": "https://github.com/levina-lab/vmusic",
+    "repository": "https://github.com/UltroidDazii/MUSICYUKI",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
