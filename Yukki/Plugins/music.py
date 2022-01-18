@@ -7,7 +7,6 @@ import yt_dlp
 import shutil
 import psutil
 import subprocess
-import async
 from Yukki.Decorators.admins import AdminActual
 from os import path
 from typing import Union
@@ -63,16 +62,16 @@ async def play(_, message: Message):
         await message.reply_text(f"❌ **not in allowed chat**\n\nveez mega is only for allowed chats. ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
         return await app.leave_chat(chat_id)  
     if message.sender_chat:
-        return await message.reply_text("LU GA PUNYA TITEL,TOLONG SADAR DIRI 😫")  
+        return await message.reply_text("LU GA PUNYA TITTEL DISINI,TOLONG SADAR DIRI 😫")  
     user_id = message.from_user.id
     chat_title = message.chat.title
     username = message.from_user.first_name
     checking = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
     if await is_on_off(1):
-        LOG_ID = "-1001306851903"
+        LOG_ID = "-1001743797941"
         if int(chat_id) != int(LOG_ID):
-            return await message.reply_text("» bot is under maintenance, sorry for the inconvenience!")
-        return await message.reply_text("» bot is under maintenance, sorry for the inconvenience!")
+            return await message.reply_text("» sabar,botnya lagi maintenance")
+        return await message.reply_text("» sabar ngentod, botnya lagi maintenance")
     a = await app.get_chat_member(message.chat.id , BOT_ID)
     if a.status != "administrator":
         await message.reply_text(f"💡 To use me, I need to be an Administrator with the following permissions:\n\n» ❌ __Delete messages__\n» ❌ __Add users__\n» ❌ __Manage video chat__\n\nData is **updated** automatically after you **promote me**")
@@ -268,7 +267,7 @@ async def play(_, message: Message):
             ID4 = (result[3]["id"])
             ID5 = (result[4]["id"])
         except Exception as e:
-            return await mystic.edit_text(f"😕 Sorry, we **couldn't** find the song you were looking for\n\n• Check that the **name is correct** or **try by searching the artist.**")
+            return await mystic.edit_text(f"😒**Judul lagu lu ga ada,TOLOL**")
         thumb = "cache/results.png"
         url = "https://www.youtube.com/watch?v={id}"
         await mystic.delete()   
