@@ -7,7 +7,6 @@ import yt_dlp
 import shutil
 import psutil
 import subprocess
-from Yukki.Decorators.admins import AdminActual
 from os import path
 from typing import Union
 from .. import converter
@@ -54,7 +53,6 @@ def time_to_seconds(time):
 
 
 @Client.on_message(command(["play", "play@VeezMegaBot"]) & other_filters)
-@AdminActual
 async def play(_, message: Message):
     await message.delete()
     chat_id = message.chat.id
