@@ -30,7 +30,6 @@ from Yukki.YukkiUtilities.database.theme import (_get_theme, get_theme, save_the
 from Yukki.YukkiUtilities.database.assistant import (_get_assistant, get_assistant, save_assistant)
 from ..config import DURATION_LIMIT
 from ..YukkiUtilities.helpers.decorators import errors
-from Yukki.YukkiUtilities.helpers.administrator import adminsOnly
 from ..YukkiUtilities.helpers.filters import command, other_filters
 from ..YukkiUtilities.helpers.gets import (get_url, themes, random_assistant, ass_det)
 from ..YukkiUtilities.helpers.logger import LOG_CHAT
@@ -54,7 +53,6 @@ def time_to_seconds(time):
 
 
 @Client.on_message(command(["play", "play@VeezMegaBot"]) & other_filters)
-@adminsOnly
 async def play(_, message: Message):
     await message.delete()
     chat_id = message.chat.id
